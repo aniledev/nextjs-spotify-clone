@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div className='text-green-500'>New Application</div>
+    <div className='text-green-500'>Main Content</div>
   );
 }

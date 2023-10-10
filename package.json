@@ -29,8 +29,32 @@
     "xo": "^0.56.0"
   },
   "xo": {
-		"rules": {
-      "import/extensions": [2, "never"],
+    "rules": {
+      "@typescript-eslint/comma-dangle": [
+        0,
+        "never"
+      ],
+      "@typescript-eslint/object-curly-spacing": ["error", "always"],
+      "@typescript-eslint/quotes": [
+        "error",
+        "double",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "import/extensions": [
+        2,
+        "never"
+      ],
+      "new-cap": ["error", { "capIsNew": false }],
+      "object-curly-spacing": ["error", "always"],
+      "quotes": [
+        "error",
+        "double",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
       "unicorn/filename-case": [
         "error",
         {
@@ -38,8 +62,8 @@
             "camelCase": true,
             "pascalCase": true
           }
-	      }
-      ]		
+        }
+      ]
     }
-	}
+  }
 }

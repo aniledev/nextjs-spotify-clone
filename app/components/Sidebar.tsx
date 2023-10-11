@@ -42,7 +42,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 			href: "/search",
 			icon: BiSearch,
 			label: "Search",
-		}
+		},
 	], [pathname]);
 
 	return (

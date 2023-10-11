@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-icons": "^3.0.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
@@ -34,7 +35,10 @@
         0,
         "never"
       ],
-      "@typescript-eslint/object-curly-spacing": ["error", "always"],
+      "@typescript-eslint/object-curly-spacing": [
+        "error",
+        "always"
+      ],
       "@typescript-eslint/quotes": [
         "error",
         "double",
@@ -46,8 +50,16 @@
         2,
         "never"
       ],
-      "new-cap": ["error", { "capIsNew": false }],
-      "object-curly-spacing": ["error", "always"],
+      "new-cap": [
+        "error",
+        {
+          "capIsNew": false
+        }
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
       "quotes": [
         "error",
         "double",

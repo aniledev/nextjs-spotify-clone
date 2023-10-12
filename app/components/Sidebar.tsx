@@ -42,8 +42,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 	], [pathname]);
 
 	return (
-		<div className='flex h-full'>
-			<div className='hidden'></div>
+		<div className="flex h-full">
+			<div className=""></div>
 		</div>
 	);
 };

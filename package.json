@@ -50,6 +50,7 @@
         2,
         "never"
       ],
+      "jsx-quotes": ["error", "prefer-double"],
       "new-cap": [
         "error",
         {

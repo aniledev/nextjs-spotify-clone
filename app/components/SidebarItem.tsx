@@ -13,7 +13,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
 	active,
 	href,
 	icon: Icon,
-	label
+	label,
 }) => (
 	<Link
 		href={href}

@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { type IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";

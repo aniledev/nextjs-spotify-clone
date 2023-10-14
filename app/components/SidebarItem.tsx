@@ -13,7 +13,7 @@ type SidebarItemProps = {
 export const SidebarItem: React.FC<SidebarItemProps> = ({
 	active,
 	href,
-	icon,
+	icon: Icon,
 	label
 }) => (
 	<Link
@@ -33,6 +33,9 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
       text-neutral-400
       py-1
     `, active && "text-white")}
-	>SidebarItem</Link>
+	>
+		<Icon size={26} />
+		<p className="truncate w-full">{label}</p>
+	</Link>
 );
 

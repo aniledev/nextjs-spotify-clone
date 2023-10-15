@@ -15,7 +15,7 @@ type HeaderProps = {
 
 export const Header: React.FC<HeaderProps> = ({
 	children,
-	className
+	className,
 }) => {
 	const router = useRouter();
 

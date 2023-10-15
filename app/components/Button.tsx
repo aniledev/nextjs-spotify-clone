@@ -7,11 +7,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 	className,
 	children,
 	disabled,
-	type,
+	type = "button",
 	...props
 }, ref) => (
 	<button
-		type={type}
 		className={twMerge(`
       w-full
       rounded-full
@@ -25,12 +24,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       font-bold
       hover:opacity-75
       transition
-    `,
+      `,
 		className
 		)}
-		ref={ref}
-		disabled={disabled}
 		{...props}
+		disabled={disabled}
+		ref={ref}
+		type={type}
 	>
 		{children}
 	</button>

@@ -12,7 +12,7 @@ type ListItemProps = {
 export const ListItem: React.FC<ListItemProps> = ({
 	href,
 	image,
-	name
+	name,
 }) => {
 	const router = useRouter();
 

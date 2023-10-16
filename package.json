@@ -59,13 +59,7 @@
         }
       ],
       "object-curly-spacing": "off",
-      "quotes": [
-        "error",
-        "double",
-        {
-          "allowTemplateLiterals": true
-        }
-      ],
+      "quotes": "off",
       "unicorn/filename-case": [
         "error",
         {
@@ -74,7 +68,8 @@
             "pascalCase": true
           }
         }
-      ]
+      ],
+      "unicorn/prefer-module" : ["off"]
     }
   }
 }

@@ -36,10 +36,7 @@
         0,
         "never"
       ],
-      "@typescript-eslint/object-curly-spacing": [
-        "error",
-        "always"
-      ],
+      "@typescript-eslint/object-curly-spacing": ["error", "always"],
       "@typescript-eslint/quotes": [
         "error",
         "double",
@@ -61,10 +58,7 @@
           "capIsNew": false
         }
       ],
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ],
+      "object-curly-spacing": "off",
       "quotes": [
         "error",
         "double",

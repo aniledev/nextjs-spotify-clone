@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /**
  * @todo Remove no unsafe assignment disable with correct typing
  * @body HiHome and BiSearch elements are typed correctly but still triggering the rule. Figure out why and fix.
@@ -7,10 +6,9 @@
 
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
-import { HiHome } from "react-icons/hi";
-import { BiSearch } from "react-icons/bi";
 import { type IconType } from "react-icons";
 // < ---- COMPONENTS ---- >
+import { createRoutes } from "../routes";
 import { Box } from "./Box";
 import { Library } from "./Library";
 import { SidebarItem } from "./SidebarItem";
@@ -30,26 +28,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   const pathname = usePathname();
   const isPathHome = pathname === "/";
 
-  /**
-   * @todo Black box business logic for routes
-   * @body There's no need for routes to exist here. Routes can still be memoized and moved to separate file.
-   */
-  const routes: Route[] = useMemo(
-    () => [
-      {
-        active: isPathHome,
-        href: "/",
-        icon: HiHome,
-        label: "Home",
-      },
-      {
-        active: !isPathHome,
-        href: "/search",
-        icon: BiSearch,
-        label: "Search",
-      },
-    ],
-    [pathname],
+  const memoizedRoutes: Route[] = useMemo(
+    () =>
+      createRoutes(isPathHome).map((route) => ({
+        ...route,
+        active: route.href === pathname,
+      })),
+    [pathname, isPathHome],
   );
 
   /**
@@ -85,7 +70,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             py-4
           "
           >
-            {routes.map((item) => (
+            {memoizedRoutes.map((item) => (
               <SidebarItem key={item.label} {...item} />
             ))}
           </div>

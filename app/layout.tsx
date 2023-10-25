@@ -8,8 +8,8 @@ import { UserProvider } from "./providers/UserProvider";
 const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Spotify Clone",
-	description: "Music for Everyone",
+  title: "Spotify Clone",
+  description: "Music for Everyone",
 };
 
 /**
@@ -17,19 +17,19 @@ export const metadata: Metadata = {
  * @body `className` objects can be cleaned up with constants. DRY code.
  */
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<html lang="en">
-			<body className={font.className}>
-				<SupabaseProvider>
-					<UserProvider>
-						<Sidebar>{children}</Sidebar>
-					</UserProvider>
-				</SupabaseProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={font.className}>
+        <SupabaseProvider>
+          <UserProvider>
+            <Sidebar>{children}</Sidebar>
+          </UserProvider>
+        </SupabaseProvider>
+      </body>
+    </html>
+  );
 }

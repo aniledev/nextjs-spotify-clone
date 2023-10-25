@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.8.1",
+    "@supabase/auth-helpers-react": "^0.4.2",
     "@types/react-icons": "^3.0.0",
     "next": "13.5.4",
     "react": "^18",

@@ -4,5 +4,5 @@
  * more consistent and eliminate typo errors.
  */
 export const resource = {
-	// Flesh out resources
+  // Flesh out resources
 };

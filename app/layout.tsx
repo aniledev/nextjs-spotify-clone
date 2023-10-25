@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import { Sidebar } from "./components/Sidebar";
 import "./globals.css";
+import { SupabaseProvider } from "./providers/SupabaseProvider";
 
 const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spotify Clone",
-  description: "Music for Everyone",
+	title: "Spotify Clone",
+	description: "Music for Everyone",
 };
 
 /**
@@ -15,15 +16,17 @@ export const metadata: Metadata = {
  * @body `className` objects can be cleaned up with constants. DRY code.
  */
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={font.className}>
-        <Sidebar>{children}</Sidebar>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={font.className}>
+				<SupabaseProvider>
+					<Sidebar>{children}</Sidebar>
+				</SupabaseProvider>
+			</body>
+		</html>
+	);
 }

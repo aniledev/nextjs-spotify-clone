@@ -3,22 +3,26 @@ import { type IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";
 
 type SidebarItemProps = {
-  active?: boolean;
-  href: string;
-  icon: IconType;
-  label: string;
+	active?: boolean;
+	href: string;
+	icon: IconType;
+	label: string;
 };
 
+/**
+ * @todo Rename component
+ * @body Rename component with more descriptive name
+ */
 export const SidebarItem: React.FC<SidebarItemProps> = ({
-  active,
-  href,
-  icon: Icon,
-  label,
+	active,
+	href,
+	icon: Icon,
+	label,
 }) => (
-  <Link
-    href={href}
-    className={twMerge(
-      `
+	<Link
+		href={href}
+		className={twMerge(
+			`
       flex
       flex-row
       h-auto
@@ -33,10 +37,10 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
       text-neutral-400
       py-1
     `,
-      active && "text-white",
-    )}
-  >
-    <Icon size={26} />
-    <p className="truncate w-full">{label}</p>
-  </Link>
+			active && "text-white",
+		)}
+	>
+		<Icon size={26} />
+		<p className="truncate w-full">{label}</p>
+	</Link>
 );

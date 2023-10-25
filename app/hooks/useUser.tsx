@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
 // TODO: fix any assignment esline issues and remove diabling lines
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 import { type User } from "@supabase/auth-helpers-nextjs";
 import { useSessionContext, useUser as useSupaUser } from "@supabase/auth-helpers-react";
 import { type Subscription, type UserDetails } from "@/types";
@@ -81,4 +81,13 @@ export const UserContextProvider = (props: UserContextProps) => {
 	};
 
 	return <UserContextProvider value={userContextValue} {...props} />;
+};
+
+export const useUser = () => {
+	const context = useContext(UserContext);
+	if (context === undefined) {
+		throw new Error("useUser must be used within a UserContextProvider");
+	}
+
+	return context;
 };

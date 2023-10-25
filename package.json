@@ -26,6 +26,7 @@
     "eslint": "^8",
     "eslint-config-next": "11.1.2",
     "postcss": "^8",
+    "supabase": "^1.106.1",
     "tailwindcss": "^3",
     "typescript": "^5",
     "xo": "^0.56.0"

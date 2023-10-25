@@ -1,55 +1,54 @@
 import type Stripe from "stripe";
 
 export type UserDetails = {
-	id: string;
-	first_name: string;
-	last_name: string;
-	full_name?: string;
 	avatar_url?: string;
-	billing_addres?: Stripe.Address;
-	payment_method: Stripe.PaymentMethod[Stripe.PaymentMethod.Type];
-
+	billing_address?: Stripe.Address;
+	first_name: string;
+	full_name?: string;
+	id: string;
+	last_name: string;
+	payment_method?: Stripe.PaymentMethod[Stripe.PaymentMethod.Type];
 };
 
 export type Product = {
-	id: string;
 	active?: boolean;
-	name?: string;
 	description?: string;
+	id: string;
 	image?: string;
 	metadata?: Stripe.Metadata;
+	name?: string;
 };
 
 export type Price = {
-	id: string;
-	product_id?: string;
 	active?: boolean;
-	description?: string;
-	unit_amount?: number;
 	currency?: string;
-	type?: Stripe.Price.Type;
-	interval?: Stripe.Price.Recurring.Interval;
+	description?: string;
+	id: string;
 	interval_count?: number;
-	trial_period_days?: number | undefined;
+	interval?: Stripe.Price.Recurring.Interval;
 	metadata?: Stripe.Metadata;
+	product_id?: string;
 	products?: Product;
+	trial_period_days?: number | undefined;
+	type?: Stripe.Price.Type;
+	unit_amount?: number;
 };
 
 export type Subscription = {
-	id: string;
-	user_id: string;
-	status?: Stripe.Subscription.Status;
-	metadata?: Stripe.Metadata;
-	price_id?: string;
-	quantity?: string;
 	cancel_at_period_end?: boolean;
-	created: string;
-	current_period_start: string;
-	current_period_end: string;
-	ended_at?: string;
 	cancel_at?: string;
 	canceled_at?: string;
-	trial_start?: string;
+	created: string;
+	current_period_end: string;
+	current_period_start: string;
+	ended_at?: string;
+	id: string;
+	metadata?: Stripe.Metadata;
+	price_id?: string;
+	prices?: Price;
+	quantity?: number;
+	status?: Stripe.Subscription.Status;
 	trial_end?: string;
-	price?: Price;
+	trial_start?: string;
+	user_id: string;
 };

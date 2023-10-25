@@ -36,7 +36,10 @@
         0,
         "never"
       ],
-      "@typescript-eslint/object-curly-spacing": ["error", "always"],
+      "@typescript-eslint/object-curly-spacing": [
+        "error",
+        "always"
+      ],
       "@typescript-eslint/quotes": [
         "error",
         "double",
@@ -58,8 +61,17 @@
           "capIsNew": false
         }
       ],
-      "object-curly-spacing": "off",
-      "quotes": "off",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "quotes": [
+        "error",
+        "double",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
       "unicorn/filename-case": [
         "error",
         {
@@ -68,8 +80,7 @@
             "pascalCase": true
           }
         }
-      ],
-      "unicorn/prefer-module" : ["off"]
+      ]
     }
   }
 }

@@ -6,20 +6,24 @@ import "./globals.css";
 const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spotify Clone",
-  description: "Music for Everyone",
+	title: "Spotify Clone",
+	description: "Music for Everyone",
 };
 
+/**
+ * @todo Clean up className object with constants
+ * @body `className` objects can be cleaned up with constants. DRY code.
+ */
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={font.className}>
-        <Sidebar>{children}</Sidebar>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={font.className}>
+				<Sidebar>{children}</Sidebar>
+			</body>
+		</html>
+	);
 }

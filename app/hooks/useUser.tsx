@@ -23,7 +23,8 @@ export const UserContext = createContext<UserContextType | undefined>(
   undefined,
 );
 
-export type UserContextProps = Record<string, any>;
+// TODO: fix correct typing of UseContextProps when implemented
+export type UserContextProps = Record<string, string>;
 
 // TODO: not necessarily a hook. Could be moved to /providers
 export const UserContextProvider = (props: UserContextProps) => {

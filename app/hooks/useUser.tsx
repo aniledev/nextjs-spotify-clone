@@ -100,12 +100,12 @@ export const UserContextProvider = (props: UserContextProps) => {
 };
 
 /**
-* A custom React hook for accessing user-related data from a UserContext.
-*
-* @function
-* @returns {UserContextType} The user-related data from the UserContext.
-* @throws {Error} If used outside of a UserContextProvider.
-*/
+ * A custom React hook for accessing user-related data from a UserContext.
+ *
+ * @function
+ * @returns {UserContextType} The user-related data from the UserContext.
+ * @throws {Error} If used outside of a UserContextProvider.
+ */
 export const useUser = () => {
   const context = useContext(UserContext);
   if (context === undefined) {

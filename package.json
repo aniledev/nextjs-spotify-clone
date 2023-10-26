@@ -13,6 +13,7 @@
     "@supabase/auth-helpers-react": "^0.4.2",
     "@supabase/supabase-js": "^2.38.4",
     "@types/react-icons": "^3.0.0",
+    "loglevel": "^1.8.1",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",

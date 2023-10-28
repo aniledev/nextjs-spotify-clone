@@ -6,21 +6,20 @@ import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import { type Database } from "@/types_db";
 
 type SupabaseProviderProps = {
-  children: React.ReactNode;
+	children: React.ReactNode;
 };
 
-// TODO: fix unsafe assignment for any type
 export const SupabaseProvider: React.FC<SupabaseProviderProps> = ({
-  children,
+	children,
 }) => {
-  const supabaseClient = useMemo(
-    () => createClientComponentClient<Database>(),
-    [],
-  );
+	const supabaseClient = useMemo(
+		() => createClientComponentClient<Database>(),
+		[],
+	);
 
-  return (
-    <SessionContextProvider supabaseClient={supabaseClient}>
-      {children}
-    </SessionContextProvider>
-  );
+	return (
+		<SessionContextProvider supabaseClient={supabaseClient}>
+			{children}
+		</SessionContextProvider>
+	);
 };
